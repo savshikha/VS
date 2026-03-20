@@ -6,6 +6,10 @@ data-storytelling/
 Bauhaus Lamp/
 .venv/
 
+# SATC
+SATC/venv/
+SATC/avatars/
+
 # System & cache
 .DS_Store
 __pycache__/

@@ -1,0 +1,6 @@
+{
+  "buildCommand": "bash build.sh",
+  "outputDirectory": "SATC",
+  "installCommand": "cd SATC && pip install -r requirements.txt",
+  "framework": null
+}

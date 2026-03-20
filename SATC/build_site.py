@@ -42,6 +42,9 @@ def main():
     # Prevent </script> in dialogue from closing the script tag
     data_js = data_js.replace("</", "<\\/")
 
+    # Use /avatars/ when deploying to Vercel (images copied during build)
+    avatar_base = "/avatars/" if os.environ.get("VERCEL") else "../SATC files/"
+
     html = '''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -392,7 +395,7 @@ def main():
       'Anthony Marentino': 'Anthony.png',
       'Aidan Shaw': 'Aidan.png'
     };
-    var AVATAR_BASE = '../SATC files/';
+    var AVATAR_BASE = '__AVATAR_BASE__';
 
     var STOPWORDS = new Set(['a','an','the','and','or','but','in','on','at','to','for','of','with','by','from','as','is','was','are','were','been','be','have','has','had','do','does','did','will','would','could','should','may','might','must','shall','can','this','that','these','those','i','you','he','she','it','we','they','what','which','who','whom','me','him','her','us','them','my','your','his','its','our','their','so','just','than','too','very','when','where','why','how','all','each','every','both','few','more','most','other','some','such','no','nor','not','only','own','same','if','then','into','out','up','down','about','over','after','before','between','through','during','again','here','there','yes','oh','well','like','get','got','go','going','went','come','came','see','saw','think','thought','know','knew','want','wanted','say','said','tell','told','really','right','back','thing','things','something','anything','everything','nothing','one','two','way','lot','lots','kind','kinds','sort','bit','anything','everything','someone','anyone','everyone','nothing','i\\'m','don\\'t','can\\'t','won\\'t','it\\'s','that\\'s','what\\'s','we\\'re','they\\'re','you\\'re','he\\'s','she\\'s','isn\\'t','aren\\'t','wasn\\'t','weren\\'t','haven\\'t','hasn\\'t','hadn\\'t','doesn\\'t','didn\\'t','wouldn\\'t','couldn\\'t','shouldn\\'t','mustn\\'t','let\\'s','there\\'s','here\\'s','who\\'s','how\\'s','where\\'s','i\\'ve','you\\'ve','we\\'ve','they\\'ve','could\\'ve','would\\'ve','should\\'ve','i\\'ll','you\\'ll','he\\'ll','she\\'ll','we\\'ll','they\\'ll','i\\'d','you\\'d','he\\'d','she\\'d','we\\'d','they\\'d','didn\\'t','doesn\\'t','wasn\\'t','weren\\'t','isn\\'t','aren\\'t','gonna','carrie','samantha','charlotte','miranda','big','steve','harry','stanford','anthony','aidan']);
 
@@ -854,6 +857,7 @@ def main():
 </html>'''
 
     out_path = os.path.join(os.path.dirname(__file__), "index.html")
+    html = html.replace("__AVATAR_BASE__", avatar_base)
     placeholder = "__DATA__"
     i = html.index(placeholder)
     tw = time.perf_counter()

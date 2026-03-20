@@ -1,6 +1,0 @@
-{
-  "buildCommand": "pip install -r requirements.txt && python build_site.py",
-  "outputDirectory": ".",
-  "framework": null,
-  "installCommand": "pip install -r requirements.txt"
-}

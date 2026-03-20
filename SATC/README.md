@@ -19,6 +19,17 @@ No server or link needed — the page runs entirely in the browser. Type a word 
 
 ---
 
+## Deploy to Vercel
+
+From the **repo root** (parent of `SATC`):
+
+1. Install [Vercel CLI](https://vercel.com/cli) and run `vercel`
+2. Or connect the repo at [vercel.com](https://vercel.com) — the root `vercel.json` configures the build
+
+The build uses `build_site.py` to create a static site with all dialogue embedded. No server needed.
+
+---
+
 ## Optional: run with Flask server
 
 ```bash

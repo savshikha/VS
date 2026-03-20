@@ -1,0 +1,17 @@
+# Exclude everything not required for SATC deployment
+Assests/
+acid-design-system/
+code/
+data-storytelling/
+Bauhaus Lamp/
+.venv/
+.git/
+.DS_Store
+
+# SATC
+SATC/venv/
+SATC/avatars/
+
+# Python
+**/__pycache__/
+*.pyc
