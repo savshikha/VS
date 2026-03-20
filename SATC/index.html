@@ -888,7 +888,7 @@
     }
     [data-theme="dark"] body {
       background: #1c2634;
-      background-image: url("../SATC%20files/bg_dark.png");
+      background-image: url("/avatars/bg_dark.png");
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -951,7 +951,6 @@
     <header class="header">
       <div class="header-subtitle-row">
         <p class="header-subtitle">I couldn't help but wonder...</p>
-        <button type="button" class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode" title="Toggle dark mode" style="display:none;"></button>
       </div>
       <div class="header-main-line">Who most used the</div>
       <div class="header-search-row">
@@ -1056,7 +1055,7 @@
       'Aidan Shaw': 'Aidan.png',
       'Others': 'Others.png'
     };
-    var AVATAR_BASE = '../SATC files/';
+    var AVATAR_BASE = '/avatars/';
 
     var STOPWORDS = new Set(['a','an','the','and','or','but','in','on','at','to','for','of','with','by','from','as','is','was','are','were','been','be','have','has','had','do','does','did','will','would','could','should','may','might','must','shall','can','this','that','these','those','i','you','he','she','it','we','they','what','which','who','whom','me','him','her','us','them','my','your','his','its','our','their','so','just','than','too','very','when','where','why','how','all','each','every','both','few','more','most','other','some','such','no','nor','not','only','own','same','if','then','into','out','up','down','about','over','after','before','between','through','during','again','here','there','yes','oh','well','like','get','got','go','going','went','come','came','see','saw','think','thought','know','knew','want','wanted','say','said','tell','told','really','right','back','thing','things','something','anything','everything','nothing','one','two','way','lot','lots','kind','kinds','sort','bit','anything','everything','someone','anyone','everyone','nothing','i\'m','don\'t','can\'t','won\'t','it\'s','that\'s','what\'s','we\'re','they\'re','you\'re','he\'s','she\'s','isn\'t','aren\'t','wasn\'t','weren\'t','haven\'t','hasn\'t','hadn\'t','doesn\'t','didn\'t','wouldn\'t','couldn\'t','shouldn\'t','mustn\'t','let\'s','there\'s','here\'s','who\'s','how\'s','where\'s','i\'ve','you\'ve','we\'ve','they\'ve','could\'ve','would\'ve','should\'ve','i\'ll','you\'ll','he\'ll','she\'ll','we\'ll','they\'ll','i\'d','you\'d','he\'d','she\'d','we\'d','they\'d','didn\'t','doesn\'t','wasn\'t','weren\'t','isn\'t','aren\'t','gonna','carrie','samantha','charlotte','miranda','big','steve','harry','stanford','anthony','aidan']);
 
@@ -1955,17 +1954,7 @@
     var headerArrowBtn = document.getElementById('headerArrowBtn');
     if (headerArrowBtn) headerArrowBtn.addEventListener('click', runSearch);
 
-    var darkModeToggle = document.getElementById('darkModeToggle');
-    if (darkModeToggle) {
-      var isDark = localStorage.getItem('satc-dark-mode') === '1';
-      if (isDark) document.documentElement.setAttribute('data-theme', 'dark');
-      darkModeToggle.addEventListener('click', function() {
-        var dark = document.documentElement.getAttribute('data-theme') === 'dark';
-        document.documentElement.setAttribute('data-theme', dark ? '' : 'dark');
-        localStorage.setItem('satc-dark-mode', dark ? '0' : '1');
-        try { buildTopInsightsThemes(); buildCharacterBarcodes(); } catch (e) {}
-      });
-    }
+    document.documentElement.setAttribute('data-theme', 'dark');
     buildTopWordsSection();
     window.addEventListener('resize', function() {
       var topInsights = document.getElementById('topInsights');
