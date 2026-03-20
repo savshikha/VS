@@ -1,0 +1,15 @@
+# Ignore everything except SATC (for Vercel deployment)
+Assests/
+acid-design-system/
+code/
+data-storytelling/
+Bauhaus Lamp/
+.venv/
+
+# System & cache
+.DS_Store
+__pycache__/
+*.pyc
+.idea/
+.vscode/
+*.log
