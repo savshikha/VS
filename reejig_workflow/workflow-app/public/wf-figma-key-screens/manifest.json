@@ -1,0 +1,110 @@
+{
+  "generated": "2026-04-23T14:17:00.674Z",
+  "assets": {
+    "header-logo": {
+      "file": "header-logo.svg",
+      "contentType": "image/svg+xml",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/75877193-1a51-4993-af5a-f2fc6578242e"
+    },
+    "header-search": {
+      "file": "header-search.svg",
+      "contentType": "image/svg+xml",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/828eca30-d6b8-4afe-8530-2ef657bfc36c"
+    },
+    "header-gear": {
+      "file": "header-gear.svg",
+      "contentType": "image/svg+xml",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/41b79be4-916b-45b0-b16b-a5cb67d2ee1c"
+    },
+    "header-avatar": {
+      "file": "header-avatar.jpg",
+      "contentType": "image/jpeg",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/8bb0979a-4089-4cb5-920b-51793675250f"
+    },
+    "title-job": {
+      "file": "title-job.svg",
+      "contentType": "image/svg+xml",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/10299be9-64e0-4ba0-8fa2-99790652398c"
+    },
+    "title-arrow": {
+      "file": "title-arrow.svg",
+      "contentType": "image/svg+xml",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/397ffa9b-6b6e-4e83-be13-09a050d09063"
+    },
+    "title-status-dot": {
+      "file": "title-status-dot.svg",
+      "contentType": "image/svg+xml",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/98a1bec3-4871-4efb-8c48-52c86719ce44"
+    },
+    "title-users": {
+      "file": "title-users.svg",
+      "contentType": "image/svg+xml",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/9447a0fc-fafb-4652-ae2b-9426c786fd76"
+    },
+    "title-tasks": {
+      "file": "title-tasks.svg",
+      "contentType": "image/svg+xml",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/80895ce1-1f91-436c-bf74-8977386c6164"
+    },
+    "nav-spark": {
+      "file": "nav-spark.svg",
+      "contentType": "image/svg+xml",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/292ac3c4-37aa-4c22-b6f9-a3f8e58b6cc3"
+    },
+    "nav-pathways": {
+      "file": "nav-pathways.svg",
+      "contentType": "image/svg+xml",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/7bb3e656-f98f-4423-8f2f-30629eb3415f"
+    },
+    "nav-compass": {
+      "file": "nav-compass.svg",
+      "contentType": "image/svg+xml",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/b85bbe5c-e8c9-47a2-b038-e457e4168dcc"
+    },
+    "nav-tasks": {
+      "file": "nav-tasks.svg",
+      "contentType": "image/svg+xml",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/0a5ceb01-4978-44eb-b576-d3c07d1c990f"
+    },
+    "nav-stars": {
+      "file": "nav-stars.svg",
+      "contentType": "image/svg+xml",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/a25ca8a2-3d10-40fd-a3c5-f9f7064a5d41"
+    },
+    "stat-pie": {
+      "file": "stat-pie.svg",
+      "contentType": "image/svg+xml",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/7a051399-860f-498e-b513-360a7f747b52"
+    },
+    "stat-hourglass": {
+      "file": "stat-hourglass.svg",
+      "contentType": "image/svg+xml",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/5c9d037a-6699-4ff9-bc84-a9da0cdd4980"
+    },
+    "canvas-drag": {
+      "file": "canvas-drag.svg",
+      "contentType": "image/svg+xml",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/0c3e5e4f-1253-43a9-87b9-e14efb0093bc"
+    },
+    "canvas-connector": {
+      "file": "canvas-connector.svg",
+      "contentType": "image/svg+xml",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/e7cabe11-4c57-4577-9acb-8ad9f439ebfc"
+    },
+    "agent-salesforce": {
+      "file": "agent-salesforce.svg",
+      "contentType": "image/svg+xml",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/a95df27c-1cf5-4822-9286-3f7c33df3ecc"
+    },
+    "agent-gemini": {
+      "file": "agent-gemini.svg",
+      "contentType": "image/svg+xml",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/6a06fd62-9e86-40de-96d9-992be3c38230"
+    },
+    "agent-microsoft": {
+      "file": "agent-microsoft.svg",
+      "contentType": "image/svg+xml",
+      "sourceUrl": "https://www.figma.com/api/mcp/asset/81729c57-1948-4bd3-a68e-b687027bfcc2"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "Wordnote Dictionary",
+    "slug": "dictionote",
+    "version": "1.6.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "privacy": "unlisted",
+    "owner": "zehfernandes",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*",
+      "assets/**"
+    ],
+    "ios": {
+      "buildNumber": "9",
+      "supportsTablet": false,
+      "infoPlist": {
+        "CFBundleAllowMixedLocalizations": true,
+        "RCTAsyncStorageExcludeFromBackup": false
+      },
+      "bundleIdentifier": "com.zehfernandes.dictionote",
+      "config": {
+        "usesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "allowBackup": true,
+      "package": "com.zehfernandes.dictionote",
+      "versionCode": 7
+    },
+    "locales": {
+      "pt": "./storelocales/pt.json"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "a3903e0f-b695-4889-9222-d6684c190e35"
+      }
+    }
+  }
+}

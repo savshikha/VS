@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello — standalone page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0c0f12;
+      --bg-elevated: #141a21;
+      --text: #e6e2db;
+      --muted: #9a948a;
+      --accent: #d4a574;
+      --accent-soft: rgba(212, 165, 116, 0.15);
+      --border: rgba(230, 226, 219, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      background: var(--bg);
+      background-image:
+        radial-gradient(ellipse 120% 80% at 50% -20%, rgba(212, 165, 116, 0.12), transparent 55%),
+        radial-gradient(ellipse 60% 40% at 100% 100%, rgba(100, 130, 160, 0.08), transparent 50%);
+      font-family: "Source Sans 3", system-ui, sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+      max-width: 38rem;
+      margin: 0 auto;
+      padding: clamp(2.5rem, 8vw, 5rem) clamp(1.25rem, 5vw, 2rem) 4rem;
+    }
+
+    header {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 0.75rem;
+    }
+
+    h1 {
+      font-family: "Fraunces", Georgia, serif;
+      font-optical-sizing: auto;
+      font-weight: 600;
+      font-size: clamp(2rem, 5vw, 2.75rem);
+      line-height: 1.15;
+      margin: 0 0 0.75rem;
+      letter-spacing: -0.02em;
+    }
+
+    .lede {
+      margin: 0;
+      font-size: 1.125rem;
+      color: var(--muted);
+      max-width: 32ch;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    section h2 {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin: 0 0 0.75rem;
+      color: var(--accent);
+    }
+
+    p {
+      margin: 0 0 1rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    .card {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.35rem;
+      margin-top: 1.5rem;
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.25);
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      color: #e8c49a;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Standalone page</p>
+      <h1>A page of its own</h1>
+      <p class="lede">This site lives in its own folder at the repo root — not inside SATC. Edit the copy and styles here freely.</p>
+    </header>
+
+    <section>
+      <h2>How to open it</h2>
+      <p>
+        The server must use the <strong>repository root</strong> as its working directory (not the
+        <code style="color: var(--text);">SATC</code> folder only). Then open
+        <code style="color: var(--text);">http://localhost:8000/new-page/</code>
+        — or run <code style="color: var(--text);">./serve-dev.sh</code> from the repo root.
+      </p>
+      <p>
+        SATC app with that setup:
+        <code style="color: var(--text);">http://localhost:8000/SATC/index.html</code>
+      </p>
+    </section>
+
+    <section>
+      <h2>Next steps</h2>
+      <p>Rename the folder or file, change the title in <code style="color: var(--text);">&lt;head&gt;</code>, and replace this content with whatever you need.</p>
+      <div class="card" role="note">
+        <p>Tip: keep everything in one file for simplicity, or add a sibling <code style="color: var(--text);">styles.css</code> in this folder if the page grows.</p>
+      </div>
+    </section>
+
+    <footer>
+      Independent from the SATC app — separate folder, separate entry point.
+    </footer>
+  </main>
+</body>
+</html>
