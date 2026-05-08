@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { Trash2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { AGENT_OPTIONS, type AgentKey } from "./AgentSuggestionDropdown";
 import { WF_FIGMA } from "./mcpFigmaIconUrls";
@@ -103,13 +104,27 @@ function DetailsNotesSection({
           <div className="w-full">
             <div className="flex items-baseline justify-between gap-3">
               <p className={statTitleClass}>Notes</p>
-              <p
-                className="shrink-0 text-[16px] leading-[1.2]"
-                aria-live="polite"
-              >
-                <span className="text-[#494959]">{draft.length}</span>
-                <span className="text-[#808094]">/{NOTES_MAX}</span>
-              </p>
+              <div className="flex shrink-0 items-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setDraft("");
+                    taRef.current?.focus();
+                  }}
+                  className="inline-flex size-6 items-center justify-center rounded-md text-[#808094] transition-colors hover:bg-[#f4f4fa] hover:text-[#4f4bff] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-[#4f4bff]"
+                  aria-label="Clear notes"
+                  title="Clear notes"
+                >
+                  <Trash2 className="size-3.5" aria-hidden />
+                </button>
+                <p
+                  className="text-[16px] leading-[1.2]"
+                  aria-live="polite"
+                >
+                  <span className="text-[#494959]">{draft.length}</span>
+                  <span className="text-[#808094]">/{NOTES_MAX}</span>
+                </p>
+              </div>
             </div>
             <textarea
               ref={taRef}

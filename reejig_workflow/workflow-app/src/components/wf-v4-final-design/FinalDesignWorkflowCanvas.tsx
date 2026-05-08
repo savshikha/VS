@@ -156,6 +156,13 @@ function createNewCanvasStep(steps: WorkflowCanvasStep[]): WorkflowCanvasStep {
   };
 }
 
+function relabelStepsByOrder(steps: WorkflowCanvasStep[]): WorkflowCanvasStep[] {
+  return steps.map((step, index) => ({
+    ...step,
+    stepLabel: `O${index + 1}`,
+  }));
+}
+
 const shadowCard = "shadow-[0px_-3.4px_10.2px_rgba(0,0,0,0.08)]";
 const shadowElevated =
   "shadow-[4px_4px_16px_0px_rgba(157,78,221,0.16)]";
@@ -1051,13 +1058,13 @@ export function FinalDesignWorkflowCanvas({
         const s = prev.find((x) => x.id === id);
         if (!s?.isNew) return prev;
         if (!s.title.trim() && !s.description.trim()) {
-          const next = prev.filter((x) => x.id !== id);
+          const next = relabelStepsByOrder(prev.filter((x) => x.id !== id));
           onStepsChange?.(next);
           return next;
         }
-        const next = prev.map((x) =>
+        const next = relabelStepsByOrder(prev.map((x) =>
           x.id === id ? { ...x, isNew: false } : x
-        );
+        ));
         onStepsChange?.(next);
         return next;
       });
@@ -1071,7 +1078,7 @@ export function FinalDesignWorkflowCanvas({
       editBaselineRef.current = null;
       setSteps((prev) => {
         if (prev.length <= 1) return prev;
-        const next = prev.filter((x) => x.id !== id);
+        const next = relabelStepsByOrder(prev.filter((x) => x.id !== id));
         onStepsChange?.(next);
         return next;
       });
@@ -1088,8 +1095,9 @@ export function FinalDesignWorkflowCanvas({
         if (idx < 0) return prev;
         const next = [...prev];
         next.splice(idx + 1, 0, createNewCanvasStep(prev));
-        onStepsChange?.(next);
-        return next;
+        const relabeled = relabelStepsByOrder(next);
+        onStepsChange?.(relabeled);
+        return relabeled;
       });
     },
     [onStepsChange]
@@ -1149,14 +1157,14 @@ export function FinalDesignWorkflowCanvas({
       if (!currentSteps.some((s) => s.isNew)) return;
       e.preventDefault();
       setSteps((prev) => {
-        const next = prev
+        const next = relabelStepsByOrder(prev
           .filter(
             (s) =>
               !s.isNew ||
               s.title.trim() !== "" ||
               s.description.trim() !== ""
           )
-          .map((s) => (s.isNew ? { ...s, isNew: false } : s));
+          .map((s) => (s.isNew ? { ...s, isNew: false } : s)));
         onStepsChange?.(next);
         return next;
       });
